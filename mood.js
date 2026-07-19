@@ -33,17 +33,31 @@ const MOODS = {
     }
 }
 
-let setMood = (moodName) => {
+function setMood(moodName) {
     let mood = MOODS[moodName];
     document.body.style.backgroundColor = mood.bg;
     document.body.style.color = mood.text;
-    let moodTypeContainer = document.getElementById("mood-type");
+    let moodTypeContainer = document.getElementById("quote");
     moodTypeContainer.textContent = mood.name;
-    moodTypeContainer.style = getComputedStyle("#quote");
 }
 
 const btnContainer = document.getElementById("btn-container");
+
+// Change colors on click
 btnContainer.addEventListener("click", (event) => {
     let moodName = event.target.textContent.trim().toLowerCase();
     setMood(moodName);
+});
+// Hover pre
+// view — show each mood's color on its own button
+btnContainer.addEventListener("mouseover", (event) => {
+    let moodName = event.target.textContent.trim().toLowerCase();
+    let mood = MOODS[moodName];
+    event.target.style.backgroundColor = mood.bg; 
+    event.target.style.color = mood.text;
+});
+
+btnContainer.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "";
+    event.target.style.color = "";
 });

@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
+    padding: 0;
     transition: all 0.6s ease;
     min-height: 100vh;
     margin: 0;
@@ -21,9 +21,14 @@ h1 {
     cursor: pointer;
     border: none;
     border-radius: 12px;
+    transition: transform 0.25s ease;
 }
 
-.mood-type {
+.mood-btn:hover {
+    transform: scale(1.1);
+}
+
+#quote {
     margin-top: 40px;
     font-size: 1.8rem;
     font-weight: bold;
@@ -31,4 +36,13 @@ h1 {
 
 section {
     border-bottom: 4px solid #000;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid black;
+  margin: 1em 0;
+  padding: 0;
 }
