@@ -13,19 +13,25 @@
     <h2> JavaScript Questions </h3>
     <h3> 1. Why is textContent safer than innerHTML? </h4>
         <p>
-            <b>Answer:</b> Type your answer here.
+            <b>Answer:</b> Using textContent is generally safer because it displays a string result,
+            whereas innerHTML will try to interpret any values into HTML code.
+            Because of this it reduces the risk of cross-site scripting (XSS),
+            which are malicious values or javascript behaviors that the browser may try to execute.
+            Any values containing user input or data you don't have control over is vulnerable to this.
         </p>
     <h3> 2. How are HTML elements connected to JavaScript variables using DOM selection? </h4>
         <p>
-            <b>Answer:</b> Type your answer here.
+            <b>Answer:</b> HTML elements are connected to JavaScript through variable references. For example, 'let someElement = document.getElementById("someId")';
+            uses 'document' to access the webpage's current document object model. The 'getElementById()' method finds the HTML element whose id is "someId".
+            From there, the element is stored as a reference in the someElement variable that can be used to read or modify it.
         </p>
     <h3> 3. What would happen to the text box with id="text" if I added this line to the code above it: </h4>
-        <div id="text">
-            text.textContent = "Hello!"
-        </div>
-        <p>
-            <b>Answer:</b> Type your answer here.
+        <p id="text">
+            <code>text.textContent = "Hello!"</code>
         </p>
+        <p>
+            <b>Answer:</b> That text box would change to say "Hello!" instead. The reason why is because we selected the element id 'text' and chose to change
+            its text value with "Hello!", overriding what we had before and displaying our new value.
     <hr>
     <h2 id="quote">Click a mood to change the theme!</h2>
     <div id="btn-container">
