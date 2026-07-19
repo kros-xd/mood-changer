@@ -48,8 +48,8 @@ btnContainer.addEventListener("click", (event) => {
     let moodName = event.target.textContent.trim().toLowerCase();
     setMood(moodName);
 });
-// Hover pre
-// view — show each mood's color on its own button
+
+// Preview the mood's colors in the button on hover
 btnContainer.addEventListener("mouseover", (event) => {
     let moodName = event.target.textContent.trim().toLowerCase();
     let mood = MOODS[moodName];
