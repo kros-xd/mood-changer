@@ -1,0 +1,48 @@
+/* Kris Lee | July 18, 2026 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    transition: all 0.6s ease;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.mood-btn {
+    padding: 14px 24px;
+    margin: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.25s ease;
+}
+
+.mood-btn:hover {
+    transform: scale(1.1);
+}
+
+#quote {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+section {
+    border-bottom: 4px solid #000;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid black;
+  margin: 1em 0;
+  padding: 0;
+}
