@@ -9,6 +9,9 @@ const BLUE = "#100075";
 const RED = "#FF2200";
 const PURPLE = "#2b0053";
 
+// Commented out to see the differences, uncomment to see changes.
+//text.textContent = "Hello!";
+
 // Mood Data
 const MOODS = {
     happy: {
@@ -45,12 +48,14 @@ const btnContainer = document.getElementById("btn-container");
 
 // Change colors on click
 btnContainer.addEventListener("click", (event) => {
+    if (!event.target.classList.contains("mood-btn")) return;
     let moodName = event.target.textContent.trim().toLowerCase();
     setMood(moodName);
 });
-// Hover pre
-// view — show each mood's color on its own button
+
+// Preview the mood's colors in the button on hover
 btnContainer.addEventListener("mouseover", (event) => {
+    if (!event.target.classList.contains("mood-btn")) return;
     let moodName = event.target.textContent.trim().toLowerCase();
     let mood = MOODS[moodName];
     event.target.style.backgroundColor = mood.bg; 
@@ -58,6 +63,7 @@ btnContainer.addEventListener("mouseover", (event) => {
 });
 
 btnContainer.addEventListener("mouseout", (event) => {
+    if (!event.target.classList.contains("mood-btn")) return;
     event.target.style.backgroundColor = "";
     event.target.style.color = "";
 });
